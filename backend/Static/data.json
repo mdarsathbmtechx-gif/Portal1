@@ -1,0 +1,68 @@
+[
+  {
+    "logo": "https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?q=80&w=1332&auto=format&fit=crop",
+    "title": "Jr. PHP Developer",
+    "skills": "CSS3, HTML5, Javascript, Bootstrap, Jquery",
+    "salary": "$5K - $8K",
+    "openings": 6,
+    "badges": ["Urgent"]
+  },
+  {
+    "logo": "https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?q=80&w=1332&auto=format&fit=crop",
+    "title": "Exp. Project Manager",
+    "skills": "CSS3, HTML5, Javascript, Bootstrap, Jquery",
+    "salary": "$6K - $10K",
+    "openings": 4,
+    "badges": []
+  },
+  {
+    "logo": "https://images.unsplash.com/photo-1616469832301-ffaeadc68cf3?q=80&w=1170&auto=format&fit=crop",
+    "title": "Sr. WordPress Developer",
+    "skills": "CSS3, HTML5, Javascript, Bootstrap, Jquery",
+    "salary": "$5K - $8K",
+    "openings": 3,
+    "badges": ["Urgent"]
+  },
+  {
+    "logo": "https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?q=80&w=1332&auto=format&fit=crop",
+    "title": "Jr. Laravel Developer",
+    "skills": "CSS3, HTML5, Javascript, Bootstrap, Jquery",
+    "salary": "$4.2K - $6K",
+    "openings": 2,
+    "badges": []
+  },
+  {
+    "logo": "https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?q=80&w=1332&auto=format&fit=crop",
+    "title": "Sr. UI/UX Designer",
+    "skills": "CSS3, HTML5, Javascript, Bootstrap, Jquery",
+    "salary": "$4K - $5.5K",
+    "openings": 5,
+    "badges": ["Urgent", "Freelancer"]
+  },
+  {
+    "logo": "https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?q=80&w=1332&auto=format&fit=crop",
+    "title": "Java & Python Developer",
+    "skills": "CSS3, HTML5, Javascript, Bootstrap, Jquery",
+    "salary": "$2K - $4K",
+    "openings": 4,
+    "badges": ["Featured", "Urgent", "Part Time"]
+  },
+  {
+    "logo": "https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?q=80&w=1332&auto=format&fit=crop",
+    "title": "Sr. Code Ignetor Developer",
+    "skills": "CSS3, HTML5, Javascript, Bootstrap, Jquery",
+    "salary": "$5K - $6K",
+    "openings": 3,
+    "badges": ["Urgent", "Full Time"]
+  },
+  {
+    "logo": "https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?q=80&w=1332&auto=format&fit=crop",
+    "title": "Sr. Magento Developer",
+    "skills": "CSS3, HTML5, Javascript, Bootstrap, Jquery",
+    "salary": "$3.2K - $5K",
+    "openings": 5,
+    "badges": ["Featured", "Internship"]
+  }
+]
+
+

@@ -1,0 +1,66 @@
+[
+  {
+    "logo": "https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=1206&auto=format&fit=crop",
+    "name": "Tech Solutions",
+    "industry": "Software & IT",
+    "location": "Bangalore, India",
+    "size": "201-500 Employees",
+    "tags": ["AI", "Cloud", "Web Development"]
+  },
+  {
+    "logo": "https://via.placeholder.com/150",
+    "name": "CloudWorks",
+    "industry": "Cloud Computing",
+    "location": "Hyderabad, India",
+    "size": "51-200 Employees",
+    "tags": ["SaaS", "Infrastructure", "Node.js"]
+  },
+  {
+    "logo": "https://via.placeholder.com/150",
+    "name": "InnovateX",
+    "industry": "Technology & Innovation",
+    "location": "Remote",
+    "size": "201-500 Employees",
+    "tags": ["Full Stack", "AI", "Blockchain"]
+  },
+  {
+    "logo": "https://via.placeholder.com/150",
+    "name": "AI Labs",
+    "industry": "Artificial Intelligence",
+    "location": "Pune, India",
+    "size": "51-200 Employees",
+    "tags": ["Machine Learning", "Python", "NLP"]
+  },
+  {
+    "logo": "https://via.placeholder.com/150",
+    "name": "DesignHub",
+    "industry": "Design & UX",
+    "location": "Delhi, India",
+    "size": "1-50 Employees",
+    "tags": ["UI/UX", "Prototyping", "Figma"]
+  },
+  {
+    "logo": "https://via.placeholder.com/150",
+    "name": "Flipkart",
+    "industry": "E-commerce",
+    "location": "Mumbai, India",
+    "size": "5001-10000 Employees",
+    "tags": ["Retail", "Marketing", "Logistics"]
+  },
+  {
+    "logo": "https://via.placeholder.com/150",
+    "name": "Google",
+    "industry": "Software & IT",
+    "location": "Bangalore, India",
+    "size": "10001+ Employees",
+    "tags": ["Cloud", "AI", "Search Engine"]
+  },
+  {
+    "logo": "https://via.placeholder.com/150",
+    "name": "Microsoft",
+    "industry": "Software & IT",
+    "location": "Hyderabad, India",
+    "size": "10001+ Employees",
+    "tags": ["Cloud", "AI", "Office Suite"]
+  }
+]

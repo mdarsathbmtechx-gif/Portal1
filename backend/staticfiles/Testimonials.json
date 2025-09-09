@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Ananya Sharma",
+    "role": "Software Engineer",
+    "image": "/avatar1.png",
+    "quote": "This portal made my job search so much easier! Within a week, I found my dream job."
+  },
+  {
+    "name": "Rahul Mehta",
+    "role": "HR Manager",
+    "image": "/avatar2.png",
+    "quote": "As a recruiter, I can easily connect with skilled candidates. The platform is smooth and efficient."
+  },
+  {
+    "name": "Sneha Patel",
+    "role": "UI/UX Designer",
+    "image": "/avatar3.png",
+    "quote": "I love how user-friendly this portal is. The process is seamless and stress-free."
+  }
+]
