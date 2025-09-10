@@ -1,22 +1,18 @@
-from django.db import models
-from djongo import models
-from django.contrib.auth.models import AbstractUser
+# jobs/models.py
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from django.db import models
-from django.contrib.auth.models import AbstractUser, Group, Permission
-from django.db import models
-
-from django.contrib.auth.models import AbstractUser
-from django.db import models
 
 class RecruiterUser(AbstractUser):
     phone = models.CharField(max_length=15, blank=True, null=True)
     gst = models.CharField(max_length=20, blank=True, null=True)
+    company_name = models.CharField(max_length=255, blank=True)
 
     def __str__(self):
         return self.username
 
+    class Meta:
+        verbose_name = "Recruiter User"
+        verbose_name_plural = "Recruiter Users"
 
 
 class JobPost(models.Model):
@@ -40,9 +36,6 @@ class JobPost(models.Model):
     company_name = models.CharField(max_length=100)
     company_email = models.EmailField()
     created_at = models.DateTimeField(auto_now_add=True)
-    
-class RecruiterUser(AbstractUser):
-    phone = models.CharField(max_length=15)
-    gst = models.CharField(max_length=20)
 
-    
+    def __str__(self):
+        return self.title
