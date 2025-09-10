@@ -1,19 +1,16 @@
 from django.contrib import admin
-from django.urls import path, re_path
+from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
-import os
-
-from jobs.views import FrontendAppView
+from jobportal.views import FrontendAppView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # Add your API routes here
+    path('api/', include('jobs.urls')),  # Jobs API routes
+  
+    # React catch-all (must be last)
+    re_path(r'^(?:.*)/?$', FrontendAppView.as_view(), name='frontend'),
 ]
 
-# Serve React static files in development
 if settings.DEBUG:
-    urlpatterns += static('/assets/', document_root=os.path.join(settings.BASE_DIR, '../client/dist/assets'))
-
-# Catch-all route for React (must be last!)
-urlpatterns += [re_path(r'^.*$', FrontendAppView.as_view(), name='home')]
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

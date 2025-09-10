@@ -1,11 +1,48 @@
 from django.db import models
-
-# Create your models here.
+from djongo import models
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+from django.contrib.auth.models import AbstractUser, Group, Permission
 from django.db import models
 
-class Job(models.Model):
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+
+class RecruiterUser(AbstractUser):
+    phone = models.CharField(max_length=15, blank=True, null=True)
+    gst = models.CharField(max_length=20, blank=True, null=True)
+
+    def __str__(self):
+        return self.username
+
+
+
+class JobPost(models.Model):
+    # Step 1: Job Details
+    about = models.CharField(max_length=100)
     title = models.CharField(max_length=200)
-    company = models.CharField(max_length=200)
-    description = models.TextField()
-    location = models.CharField(max_length=100)
+    description = models.TextField(blank=True)
+    openings = models.IntegerField(default=1)
+    min_salary = models.FloatField(null=True, blank=True)
+    max_salary = models.FloatField(null=True, blank=True)
+
+    # Step 2: Candidate Requirement
+    education = models.CharField(max_length=50)
+    experience = models.CharField(max_length=50)
+    gender = models.CharField(max_length=20)
+    skills = models.JSONField(default=list, blank=True)
+    manage_candidates = models.JSONField(default=list, blank=True)
+    
+    # Step 3: Company Details
+    company_type = models.CharField(max_length=100)
+    company_name = models.CharField(max_length=100)
+    company_email = models.EmailField()
     created_at = models.DateTimeField(auto_now_add=True)
+    
+class RecruiterUser(AbstractUser):
+    phone = models.CharField(max_length=15)
+    gst = models.CharField(max_length=20)
+
+    

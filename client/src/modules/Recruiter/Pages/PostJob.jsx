@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, Input, Select, Radio, Button, Card, Steps, Checkbox, message } from "antd";
 import RecruiterNavbar from "../RecruiterLayout/RecruiterNavbar";
+import axios from "axios";
 
 const { TextArea } = Input;
 const { Step } = Steps;
@@ -19,14 +20,20 @@ export default function PostJob() {
 
   const prev = () => setCurrentStep((prev) => prev - 1);
 
-  const handleSubmit = (values) => {
-    setLoading(true);
-    console.log("Final Job Data:", values);
-    setTimeout(() => {
-      setLoading(false);
-      message.success("Job posted successfully!");
-    }, 1000);
-  };
+const handleSubmit = async (values) => {
+  setLoading(true);
+  try {
+    const res = await axios.post("http://127.0.0.1:8000/api/jobs", values);
+    message.success("Job posted successfully!");
+    form.resetFields();
+    setCurrentStep(0);
+  } catch (err) {
+    console.error(err);
+    message.error("Failed to post job");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="min-h-screen bg-gray-50">

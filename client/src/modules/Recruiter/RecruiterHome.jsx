@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Card, Button, Typography, Row, Col, Input, message, Tabs } from "antd";
 import { FaUserTie, FaUsers, FaSearch } from "react-icons/fa";
 import RecruiterNavbar from "./RecruiterLayout/RecruiterNavbar";
+import axios from "axios";
 
 const { Title, Text } = Typography;
 
@@ -45,33 +46,40 @@ export default function RecruiterHome() {
     message.success(`OTP sent! (For demo: ${otp})`);
   };
 
-  const handleSubmit = () => {
-    const { companyName, phone, gst, password, confirmPassword, otp, terms } = formData;
+const handleSubmit = async () => {
+  const { companyName, phone, gst, password, confirmPassword, otp, terms } = formData;
 
-    if (!companyName || !phone || !gst || !password || !confirmPassword) {
-      message.error("Please fill in all fields");
-      return;
-    }
-    if (!terms) {
-      message.error("You must agree to the Terms & Conditions");
-      return;
-    }
-    if (password !== confirmPassword) {
-      message.error("Passwords do not match");
-      return;
-    }
-    if (!otpSent || !otp) {
-      message.error("Please verify your phone number with OTP");
-      return;
-    }
-    if (parseInt(otp) !== generatedOtp) {
-      message.error("Invalid OTP. Please try again.");
-      return;
-    }
+  if (!companyName || !phone || !gst || !password || !confirmPassword) {
+    message.error("Please fill in all fields");
+    return;
+  }
+  if (!terms) {
+    message.error("You must agree to the Terms & Conditions");
+    return;
+  }
+  if (password !== confirmPassword) {
+    message.error("Passwords do not match");
+    return;
+  }
+  if (!otpSent || !otp) {
+    message.error("Please verify your phone number with OTP");
+    return;
+  }
+  if (parseInt(otp) !== generatedOtp) {
+    message.error("Invalid OTP. Please try again.");
+    return;
+  }
 
-    message.success("Registered successfully!");
-    console.log("Form Data:", formData);
-
+  try {
+    const res = await axios.post("http://127.0.0.1:8000/api/register/", {
+      username: companyName,  // or use a dedicated username field
+      password: password,
+      phone: phone,
+      gst: gst,
+    });
+    message.success(res.data.message || "Registered successfully!");
+    
+    // Reset form
     setFormData({
       companyName: "",
       phone: "",
@@ -83,7 +91,12 @@ export default function RecruiterHome() {
     });
     setOtpSent(false);
     setGeneratedOtp(null);
-  };
+  } catch (err) {
+    console.error(err.response.data);
+    message.error(err.response?.data?.error || "Registration failed");
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-gray-50">

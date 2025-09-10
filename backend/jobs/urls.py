@@ -1,10 +1,7 @@
-from rest_framework.routers import DefaultRouter
-from .views import JobViewSet
-from django.urls import path, include
-
-router = DefaultRouter()
-router.register(r'', JobViewSet)
+from django.urls import path
+from .views import register_recruiter, login_recruiter  # Removed JobViewSet
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('register/', register_recruiter, name='register'),
+    path('login/', login_recruiter, name='login'),
 ]

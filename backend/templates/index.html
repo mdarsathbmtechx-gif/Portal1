@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React + Django</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'assets/Bm Academy logo -CEBI1cXD.png' %}">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'assets/index-DGGlGNJ1.css' %}">
+
+    <!-- JS -->
+    <script type="module" src="{% static 'assets/index-CLqUY-ho.js' %}"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- Example: hero background image reference -->
+    <img src="{% static 'assets/hero-bg-CtV6_4_c.jpg' %}" alt="Hero Background" style="display:none;">
+    <!-- If this image is used in CSS, just make sure CSS references /static/assets/hero-bg-CtV6_4_c.jpg -->
+  </body>
+</html>
